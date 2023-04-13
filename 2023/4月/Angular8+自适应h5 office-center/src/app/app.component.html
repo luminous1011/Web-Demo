@@ -1,0 +1,183 @@
+<header>
+  <section class="pc-show">
+    <section
+      class="flex"
+      style="justify-content: space-between; max-width: 1400px; margin: 0 auto"
+    >
+      <div class="flex">
+        <div>
+          <img
+            src="../../assets/9497b53fcc9943d6adf527ff2b583dea"
+            alt=""
+            style="width: 75px; height: 30px; margin-right: 20px"
+          />
+        </div>
+        <ul nz-menu nzMatchRouter nzMode="horizontal">
+          <li nz-menu-item nzSelected>
+            <a [routerLink]="['/', 'home']">首页</a>
+          </li>
+          <li nz-menu-item>
+            <a [routerLink]="['/', 'product']">展商/商品</a>
+          </li>
+          <li nz-menu-item>
+            <a href="#"> VR观展 </a>
+          </li>
+          <li nz-menu-item>
+            <a href="/home"> 直播 </a>
+          </li>
+          <li nz-menu-item>
+            <a [routerLink]="['/', 'meeting']">洽淡</a>
+          </li>
+          <li nz-menu-item>
+            <a [routerLink]="['/', 'news']">新闻中心</a>
+          </li>
+          <li nz-menu-item>
+            <a [routerLink]="['/', 'personl']">个人中心</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <span class="red" style="font-size: 18px"> EN </span>
+        <span style="margin-left: 18px; font-size: 18px">
+            <a [routerLink]="['/', 'login']" class="red">登陆</a>
+
+        </span>
+      </div>
+    </section>
+  </section>
+  <section class="h-show">
+    <div>
+      <div>1</div>
+      <div>
+        <img
+          src="../../assets/9497b53fcc9943d6adf527ff2b583dea"
+          alt=""
+          style="width: 75px; height: 30px; margin-right: 20px"
+        />
+      </div>
+      <div>
+        <img
+          (click)="open()"
+          src="../assets/mobileMenuIcon.png"
+          style="width: 18px; height: 16px; cursor: pointer"
+          alt=""
+        />
+      </div>
+    </div>
+  </section>
+</header>
+<nz-drawer
+  [nzClosable]="false"
+  [nzVisible]="visible"
+  [nzPlacement]="placement"
+  (nzOnClose)="close()"
+>
+  <div style="text-align: center;">
+      <img
+        src="../../assets/9497b53fcc9943d6adf527ff2b583dea"
+        alt=""
+        style="width: 75px; height: 30px; margin-right: 20px"
+      />
+  </div>
+  <ul class="h5" >
+    <li >
+      <a [routerLink]="['/', 'home']" (click)="close()">首页</a>
+    </li>
+    <li >
+      <a [routerLink]="['/', 'product']" (click)="close()">展商/商品</a>
+    </li>
+    <li >
+      <a href="#" (click)="close()"> VR观展 </a>
+    </li>
+    <li >
+      <a href="#" (click)="close()"> 直播 </a>
+    </li>
+    <li>
+      <a [routerLink]="['/', 'meeting']" (click)="close()">洽淡</a>
+    </li>
+    <li >
+      <a [routerLink]="['/', 'news']" (click)="close()">新闻中心</a>
+    </li>
+    <li >
+      <a [routerLink]="['/', 'personl']" (click)="close()">个人中心</a>
+    </li>
+    <li >
+      <a [routerLink]="['/', 'login']" (click)="close()">登录</a>
+    </li>
+  </ul>
+</nz-drawer>
+<router-outlet></router-outlet>
+<footer>© 苏美达国际技术贸易有限公司版权所有 苏ICP备09033866号-5</footer>
+<style>
+ul.h5 {
+    list-style: none;
+    color: rgb(228,1,1);
+  }
+  ul.h5 li{
+    border-bottom: solid 1px #888;
+    padding: 20px 0 !important;
+  }
+  footer {
+    height: 50px;
+    width: 100%;
+    background: #242424;
+    border-bottom: white 1px solid;
+    padding-top: 0.1533rem;
+    padding-bottom: 0.1825rem;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    font-family: MicrosoftYaHei;
+    font-size: 0.1022rem;
+    color: #fff;
+    font-weight: 400;
+    line-height: 50px;
+  }
+  header {
+    position: -webkit-sticky;
+    position: sticky;
+    background: white;
+    top: 0px;
+    z-index: 10;
+    -webkit-box-shadow: 0px 0.02rem 0.08rem 0px rgba(110, 38, 0, 0.1);
+    -moz-box-shadow: 0px 0.02rem 0.08rem 0px rgba(110, 38, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(110, 38, 0, 0.1);
+    height: 70px;
+    padding: 0 42px 0 5px;
+    line-height: 70px;
+  }
+
+  header section.pc-show {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .h-show {
+    display: none;
+  }
+  .h-show > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .h-show > div div:nth-child(1) {
+    visibility: hidden;
+  }
+  @media (max-width: 960px) {
+    .pc-show {
+      display: none;
+    }
+    .h-show {
+      display: block;
+    }
+    header {
+      padding: 0 15px 0;
+    }
+  }
+</style>

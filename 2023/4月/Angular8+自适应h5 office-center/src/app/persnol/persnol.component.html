@@ -1,0 +1,143 @@
+<div class="layout-page">
+  <img src="../../assets/requirements1.png" style="width:60px;height: 60px;position: fixed;right: 10px;z-index:10001;bottom: 100px;" alt="">
+ 
+  <main>
+    <div>
+        <img src="../../assets/PCBanner.png" style="width: 100%;"  alt="">
+        <div class="main">
+            <div style="font-size: 24px;
+            font-weight: bold;color: #333;">未完善信息</div>
+            <div>
+                <div>电话：17521313188</div>
+            </div>
+            <div class="red">编辑信息</div>
+        </div>
+    </div>
+    <header>
+      <ul class="menu" nz-menu nzMode="horizontal">
+        <li nz-menu-item nzSelected>消息列表</li>
+        <li nz-menu-item>收到的名片</li>
+        <li nz-menu-item>收藏的展品</li>
+        <li nz-menu-item>收藏的展商</li>
+        <li nz-menu-item>订阅的直播</li>
+        <li nz-menu-item>订阅的洽谈室</li>
+        <li nz-menu-item>中奖信息</li>
+      </ul>
+    </header>
+    <div class="empty">
+        <img src="../../assets/mobie_nodata.png" alt="">
+    </div>
+  </main>
+</div>
+
+<style>
+    .main{
+        background: url('../../assets/myCardBg.png') 100% no-repeat;
+        background-size: 100% 100%;
+        width: 1400px;
+        height: 197px;
+       margin: 0 auto; 
+       position: relative;
+       top: -110px;
+       display: flex;
+       justify-content: space-between;
+       padding: 40px 60px;
+
+    }
+    .empty{
+        display: flex;
+        justify-content: center;
+    }
+    .empty img{
+
+       width: 310px;
+       height: 300px;
+       margin: 0 auto; 
+       margin-top: 40px;
+    }
+  article {
+    width: 1400px;
+    margin: 0 auto;
+  }
+  .red {
+    color: rgb(228, 1, 1);
+  }
+
+  .layout-page {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: calc(100vh - 70px - 50px);
+  }
+  header {
+    margin: 5px auto 20px;
+  }
+  ::ng-deep .ant-pagination.mini .ant-pagination-item {
+    padding: 0 !important;
+  }
+  ::ng-deep .ant-pagination.mini .ant-pagination-item {
+    border: 0;
+  }
+  ::ng-deep .ant-pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+  }
+  ::ng-deep .ant-pagination-item-active {
+    font-size: 14px;
+    color: rgb(228, 1, 1);
+  }
+  ::ng-deep .ant-pagination-item-active {
+    background: transparent;
+  }
+  ::ng-deep ul.menu {
+    display: flex;
+    justify-content: center;
+    background: transparent !important;
+    width: 1400px !important;
+    margin: 0 auto;
+    margin-top: -60px;
+    border-bottom: solid 1px #ddd !important;
+  }
+  ::ng-deep .ant-menu-horizontal > .ant-menu-item-active,
+  .ant-menu-horizontal > .ant-menu-item-open,
+  .ant-menu-horizontal > .ant-menu-item-selected,
+  .ant-menu-horizontal > .ant-menu-item:hover,
+  .ant-menu-horizontal > .ant-menu-submenu-active,
+  .ant-menu-horizontal > .ant-menu-submenu-open,
+  .ant-menu-horizontal > .ant-menu-submenu-selected,
+  .ant-menu-horizontal > .ant-menu-submenu:hover {
+    color: rgb(228, 1, 1);
+    border-bottom: 2px solid rgb(228, 1, 1);
+  }
+  ::ng-deep ul.menu li {
+    width: 25% !important;
+    padding: 0 17px !important;
+  }
+  ::ng-deep ul.menu li {
+    color: #333;
+    text-align: center;
+    width: 100px;
+    font-size: 14px !important;
+  }
+  ::ng-deep .ant-menu-horizontal > .ant-menu-item-selected > a,
+  .ant-menu-horizontal > .ant-menu-item > a:hover {
+    color: rgb(228, 1, 1);
+  }
+  @media (min-width: 960px) {
+    .layout-page {
+      width: 100%;
+      min-width: 1205px;
+    }
+  }
+</style>

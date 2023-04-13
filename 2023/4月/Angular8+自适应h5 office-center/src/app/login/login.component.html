@@ -1,0 +1,78 @@
+
+<div class="container">
+    <header>
+        <div class="wrapper">
+            <div class="front">
+                <div>
+                    <img src="../../assets/homelogo.png" alt="">
+                </div>
+                <div>
+                    欢迎登陆
+                </div>
+            </div>
+            <div class="back">
+            <a [routerLink]="['/', 'home']" style="color:#999">返回首页</a>
+            </div>
+        </div>
+    
+    </header>
+    
+    <main class="pc-show">
+        <div class="login-modal">
+            <div class="login-wrapper">
+                <h1>账号登录</h1>
+                <div class="label">
+                    手机号/邮箱
+                </div>
+                <div class="input-crtl">
+                    <input type="text" placeholder="注册时填写的手机号/邮箱">
+                </div>
+                <div class="label">
+                    验证码
+                </div>
+                <div class="input-crtl">
+                    <input type="text" placeholder="请填写验证码" style="width: 224px;">
+                    <span style="color:#0152D9;" class="pointer"> 获取验证码</span>
+                </div>
+    
+                <label nz-checkbox>同意并严格遵守本站的
+                    <span class="red">《隐私政策》《平台用户协议》</span>
+                </label>
+                <button class="login-btn pointer" type="primary">登陆/注册</button>
+            </div>
+        </div>
+    </main>
+    
+    <main class="mb-show">
+        <div class="login-modal">
+            <div class="login-wrapper">
+                <h1>账号登录</h1>
+                <div class="label">
+                    手机号/邮箱
+                </div>
+                <div class="input-crtl">
+                    <input type="text" placeholder="注册时填写的手机号/邮箱">
+                </div>
+                <div class="label">
+                    验证码
+                </div>
+                <div class="input-crtl">
+                    <input type="text"  class="msg" placeholder="请填写验证码" style="width: 224px;">
+                    <span style="color:#0152D9;" class="pointer"> 获取验证码</span>
+                </div>
+    
+                <label nz-checkbox>同意并严格遵守本站的
+                    <span class="red">《隐私政策》《平台用户协议》</span>
+                </label>
+                <button class="login-btn pointer" type="primary">登陆/注册</button>
+            </div>
+        </div>
+    </main>
+</div>
+
+<style>
+.container{
+margin-top: -70px;
+}
+
+</style>
