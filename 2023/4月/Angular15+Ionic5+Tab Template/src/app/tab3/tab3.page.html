@@ -1,0 +1,131 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab2"> </ion-back-button>
+    </ion-buttons>
+    <ion-title> Edit Page </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"> Edit Page</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-item-divider>
+      <ion-label>Basic information</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>Member ID</ion-label>
+      <ion-input
+      disabled
+        type="text"
+        [(ngModel)]="form.memberId"
+        placeholder="Please Input"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Full Name</ion-label>
+      <ion-input
+        type="text"
+        [(ngModel)]="form.fullName"
+        placeholder="Please Input"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date of birth</ion-label>
+      <ion-datetime
+        displayFormat=" YYYY-MM-DD"
+        placeholder="Select Date"
+        [(ngModel)]="form.birth"
+      ></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select placeholder="Select Gender" [(ngModel)]="form.gender">
+        <ion-select-option value="Female">Female</ion-select-option>
+        <ion-select-option value="Male">Male</ion-select-option>
+        <ion-select-option value="Unspecified">Unspecified</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Membership type</ion-label>
+      <ion-select
+        placeholder="Select Membership type"
+        [(ngModel)]="form.membershipType"
+      >
+        <ion-select-option value="Basic">Basic</ion-select-option>
+        <ion-select-option value="Premium">Premium</ion-select-option>
+        <ion-select-option value="Corpotate">Corpotate</ion-select-option>
+        <ion-select-option value="Student">Student</ion-select-option>
+        <ion-select-option value="Day pass">Day pass</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Membership start day</ion-label>
+      <ion-datetime
+        displayFormat=" YYYY-MM-DD"
+        placeholder="Select Date"
+        [(ngModel)]="form.membershipStart"
+      ></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Contact number</ion-label>
+      <ion-input
+        type="text"
+        [(ngModel)]="form.contactNumber"
+        placeholder="Please Input"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input
+        type="text"
+        [(ngModel)]="form.email"
+        placeholder="Please Input"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Residential address</ion-label>
+      <ion-input
+        type="text"
+        [(ngModel)]="form.addr"
+        placeholder="Please Input"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Emergency contact number</ion-label>
+      <ion-input
+        type="text"
+        placeholder="Please Input"
+        [(ngModel)]="form.emergencyContactNumber"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Medical condition</ion-label>
+      <ion-input
+        type="text"
+        [(ngModel)]="form.condition"
+        placeholder="Please Input"
+      ></ion-input>
+    </ion-item>
+  </ion-card>
+  <footer style="text-align: center; margin-top: 20px">
+    <!-- <ion-button
+      (click)="handleSubmit()"
+      color="light"
+      style="margin-right: 20px"
+      [routerLink]="['/tabs/tab2']"
+    >
+      返回
+    </ion-button> -->
+    <ion-button (click)="handleSubmit()" expand="full"> Save </ion-button>
+  </footer>
+</ion-content>
