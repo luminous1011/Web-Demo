@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
+</head>
+
+<body>
+    <div class="item ">1 <img src="https://www.assassina.cn/images/index/icon.png" alt=""></div>
+    <div class="item ">1 <img src="https://www.assassina.cn/images/index/icon.png" alt=""></div>
+    <div class="item ">1 <img src="https://www.assassina.cn/images/index/icon.png" alt=""></div>
+    <div class="item ">1 <img src="https://www.assassina.cn/images/index/icon.png" alt=""></div>
+    <div class="item ">1 <img src="https://www.assassina.cn/images/index/icon.png" alt=""></div>
+
+    <script>
+        const items = document.getElementsByClassName('item')
+        const temp = Array.from(items)
+
+        temp.forEach(item => {
+            item.addEventListener("mouseover", () => {
+                item.classList.add("easeOutAnimate")
+                setTimeout(() => {
+                    item.classList.remove("easeOutAnimate")
+                }, 1000)
+            })
+        });
+
+    </script>
+
+</body>
+
+</html>

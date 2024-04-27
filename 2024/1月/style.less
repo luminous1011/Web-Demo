@@ -1,0 +1,31 @@
+img{
+    height: 20px;
+    opacity: 0;
+}
+
+.item:hover img{
+    opacity: 1 !important;
+
+}
+
+.easeOutAnimate img{
+    animation: easeOutAnimate 1s linear;
+
+}
+
+@keyframes easeOutAnimate {
+    0%{
+            opacity: 1 ;
+
+    }
+    50%{
+        opacity: 1 ;
+
+    }
+    100%{
+
+            opacity: 0 ;
+}
+ 
+}
+
